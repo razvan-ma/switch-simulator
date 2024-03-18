@@ -1,0 +1,10 @@
+1 2 3
+La 1 am facut pseudocodul dupa care am adaugat functionalitatea de la 2 pentru 
+vlan separand porturile in 2 categorii: cu header si fara header (de vlan). 
+In cele cu header am adaugat tag-ul cu functia helper si in cele fara am 2 cazuri, 
+cand trebuie sa trimit de la trunk la access (la host), caz in care scot header-ul 
+deja pus pentru trunk, si cazul in care vine din acelasi vlan, unde nu are tag pus.
+Pentru 3 m-am folosit de exemplul stp.pcap de pe ocw pentru a crea pachetul
+si apoi am urmarit pseudocodul.
+La separarea pachetelor intre icmp/arp si stp am folosit ether_type care e defapt lungimea
+pentru stp, de aici valoarea 38.
